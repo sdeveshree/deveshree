@@ -1,0 +1,27 @@
+// @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;600&display=swap');
+@import "_bootstrap.scss";
+
+html, body {
+  font-family: 'Oswald', sans-serif;
+}
+
+#app {
+  font-family: 'Oswald', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+}
+
+$dark-bg: #1E2226;
+
+.bg-dark {
+  background-color: $dark-bg !important;
+  color: white;
+}
+
+.bg-black {
+  background-color: black !important;
+  color: white;
+}
