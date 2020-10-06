@@ -1,25 +1,31 @@
 <template>
   <div id="app">
-    <!-- Homepage First Section Container: Starts -->
+    <!-- Homepage Hero Content: Starts -->
     <b-container fluid class="bg-black">
       <b-row>
        <b-col>
-          <div class="fullpage-section d-flex justify-content-center align-items-center flex-column">
+          <div class="fullpage-section d-flex justify-content-center align-items-center flex-column text-center">
             <div class="video">
+              <!-- <b-embed
+                type="iframe"
+                aspect="16by9"
+                src="https://www.youtube.com/embed/6IZmfx9jFSo?autoplay=1&loop=1&controls=0&showinfo=0&autohide=1&enablejsapi=1&mute=1"
+                allowfullscreen
+              ></b-embed> -->
               <!-- <iframe width="100%" height="100%" src="https://www.youtube.com/embed/6IZmfx9jFSo?autoplay=1&loop=1&controls=0&showinfo=0&autohide=1&enablejsapi=1&mute=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
             </div>
             <div class="description">
-              <div class="icons">
+              <div class="icons" data-aos="fade-up" data-aos-duration="1000">
                 <img src="@/assets/1.png"/>
                 <img src="@/assets/2.png"/>
                 <img src="@/assets/3.png"/>
                 <img src="@/assets/4.png"/>
               </div>
-              <h1>Deveshree Shinde</h1>
-              <h2>D i g i t a l - M a r k e t e r</h2>
-              <h2>Born in India, Living in Toronto</h2>
-              <h2>Raised in the 90's</h2>
-              <h2>Available for hire</h2>
+              <h1 data-aos="fade-left" data-aos-duration="1000"  data-aos-delay="1000">Deveshree Shinde</h1>
+              <h2 data-aos="fade-left" data-aos-duration="1000"  data-aos-delay="1000">D i g i t a l - M a r k e t e r</h2>
+              <h2 data-aos="fade-left" data-aos-duration="1000"  data-aos-delay="1000">Born in India, Living in Toronto</h2>
+              <h2 data-aos="fade-left" data-aos-duration="1000"  data-aos-delay="1000">Raised in the 90's</h2>
+              <h2 data-aos="fade-left" data-aos-duration="1000"  data-aos-delay="1000">Available for hire</h2>
             </div>
             <div class="scroll-animation">
               <svg width="15px" height="55px">
@@ -31,8 +37,84 @@
         </b-col>
       </b-row>
     </b-container>
-    <!-- Homepage First Section Container: Ends   -->
+    <!-- /Homepage Hero Content: Ends -->
 
+    <!-- Homepage - Journey Map: Starts -->
+    <b-container>
+      <b-row>
+        <b-col>
+          <div class="info-section-container">
+            <div class="info-section">
+              <div class="info-section-header-container">
+                <div class="info-section-header">
+                  <h1>Skills <span>.101</span></h1>
+                </div><!--/info-section-header -->
+                <div class="info-section-subheader d-flex align-items-baseline">
+                  <h1><b>MY JOURNEY</b></h1>
+                  <h2>Through Digital Marketing</h2>
+                </div><!--/info-section-subheader -->
+              </div><!-- /info-section-header-container -->
+              <div class="chart-container d-flex">
+                <div class="chart-item-container">
+                  <div class="chart-item d-flex align-items-center text-center">
+                    <h1>Branding, Strategy, and Planning: 101</h1>
+                  </div>
+                  <div class="chart-item-description">
+                    <ul>
+                      <li>Branding</li>
+                      <li>Marketing</li>
+                      <li>Strategy</li>
+                      <li>Digital Marketing</li>
+                      <li>Customer Journey</li>
+                    </ul>
+                    <ul>
+                      <li>Metrics & Budget</li>
+                      <li>Website & App</li>
+                      <li>Content & Social Media Marketing</li>
+                      <li>SEM</li>
+                      <li>Presentation Skills</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="chart-item-container">
+                  <div class="chart-item d-flex align-items-center text-center">
+                    <h1>Content Marketing</h1>
+                  </div>
+                </div>
+                <div class="chart-item-container">
+                  <div class="chart-item d-flex align-items-center text-center">
+                    <h1>Social Media Marketing</h1>
+                  </div>
+                </div>
+                <div class="chart-item-container">
+                  <div class="chart-item d-flex align-items-center text-center">
+                    <h1>Performance Marketing</h1>
+                  </div>
+                </div>
+                <div class="chart-item-container">
+                  <div class="chart-item d-flex align-items-center text-center">
+                    <h1>Analytics & Reporting</h1>
+                  </div>
+                </div>
+                <div class="chart-item-container">
+                  <div class="chart-item d-flex align-items-center text-center">
+                    <h1>Professional Development</h1>
+                  </div>
+                </div>
+              </div><!--/ info-section-desc-container -->
+            </div><!-- /info-section -->
+            <div class="scroll-animation text-center">
+              <svg width="15px" height="110px">
+                <path stroke="black" d="M8.5 0 L8.5 110" />
+              </svg>
+            </div><!-- /scroll-animation -->
+          </div><!-- /section-container -->
+        </b-col>
+      </b-row>
+    </b-container>
+    <!-- /Homepage - Journey Map: Starts -->
+
+    <!-- Portfolio Section
     <b-container>
       <b-row>
         <b-col>
@@ -44,19 +126,20 @@
                 </div>
                 <div class="project-description d-flex align-items-baseline">
                   <h1><b>HYPERLOCAL</b></h1>
-                  <h2>A Creative Digital Agency For Fashion</h2>
+                  <h2>&nbsp;&nbsp;- A Creative Digital Agency For Fashion</h2>
                 </div>
-              </div><!--/ portfolio-item-description -->
-            </div><!--/ portfolio-item -->
+              </div>
+            </div>
             <div class="scroll-animation text-center">
               <svg width="15px" height="110px">
                 <path stroke="black" d="M8.5 0 L8.5 110" />
               </svg>
-            </div><!--/scroll-animation -->
-          </div><!--/ portfolio-item-container -->
+            </div>
+          </div>
         </b-col>
       </b-row>
     </b-container>
+    -->
   </div>
 </template>
 
@@ -69,6 +152,7 @@ export default {
 </script>
 
 <style lang="scss">
+// Hero Content: CSS Begins
 .fullpage-section {
   position: relative;
   overflow: hidden;
@@ -98,6 +182,54 @@ export default {
     }
   }
 }
+// Hero Content: CSS Ends
+
+// Journey Map CSS: Starts
+.info-section-container {
+  .info-section {
+    padding: 100px 20px 20px;
+    .info-section-header-container {
+      padding-bottom: 100px;
+      .info-section-header {
+        h1 {
+          text-transform: uppercase;
+          margin-bottom: 20px;
+          font-size: 6.5rem;
+          font-weight: bold;
+          span {
+            font-size: 20rem;
+          }
+        }
+      }
+      .info-section-subheader {
+        h1 {
+          font-size: 6.5rem;
+          font-weight: bold;
+        }
+        h2 {
+          padding-left: 20px;
+        }
+      }
+    }
+    .chart-scroll-container {
+    }
+    .chart-container {
+      overflow-x: scroll;
+      .chart-item-container {
+        padding-right: 40px;
+        .chart-item {
+          width: 400px;
+          height: 300px;;
+          border: 5px solid #232323;
+          border-radius: 5px;
+          padding: 20px;
+          justify-content: center;
+        }
+      }
+    }
+  }
+}
+// Journey Map CSS: Ends
 
 .portfolio-item-container {
   .portfolio-item {

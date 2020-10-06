@@ -1,5 +1,5 @@
-// @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap");
 @import "_bootstrap.scss";
 
 html, body {
@@ -11,6 +11,11 @@ html, body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #232323;
+}
+
+p,
+ul {
+  font-family: 'Lato', sans-serif;
 }
 
 $dark-bg: #1E2226;
