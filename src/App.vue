@@ -48,7 +48,7 @@
         <b-col>
           <div class="info-section-container">
             <div class="info-section">
-              <div class="info-section-header-container">
+              <div class="info-section-header-container" data-aos="fade-right" data-aos-duration="1000">
                 <div class="info-section-header">
                   <h1>Skills <span>.101</span></h1>
                 </div><!--/info-section-header -->
@@ -71,22 +71,6 @@
             <div class="chart-item d-flex align-items-center text-center">
               <h2>Branding, Strategy, and Planning: 101</h2>
             </div>
-            <!-- <div class="chart-item-description">
-              <ul>
-                <li>Branding</li>
-                <li>Marketing</li>
-                <li>Strategy</li>
-                <li>Digital Marketing</li>
-                <li>Customer Journey</li>
-              </ul>
-              <ul>
-                <li>Metrics & Budget</li>
-                <li>Website & App</li>
-                <li>Content & Social Media Marketing</li>
-                <li>SEM</li>
-                <li>Presentation Skills</li>
-              </ul>
-            </div> -->
           </div>
           <div class="chart-item-container">
             <div class="chart-item d-flex align-items-center text-center">
@@ -116,8 +100,8 @@
         </div><!--/chart-scroll-container -->
       </div><!--/ chart-container -->
       <div class="scroll-animation text-center">
-        <svg width="15px" height="110px">
-          <path stroke="black" d="M8.5 0 L8.5 110" />
+        <svg width="15px" height="55px">
+          <path stroke="black" d="M8.5 0 L8.5 55" />
         </svg>
       </div><!-- /scroll-animation -->
     </section>
