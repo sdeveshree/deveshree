@@ -15,7 +15,12 @@ html, body {
 
 p,
 ul {
+  cursor: default;
   font-family: 'Lato', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  cursor: default;
 }
 
 $dark-bg: #1E2226;

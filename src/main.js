@@ -13,5 +13,14 @@ Vue.use(IconsPlugin)
 AOS.init()
 
 new Vue({
-  render: h => h(App)
+  render: h => h(App),
+  created: function () {
+    window.addEventListener('mousemove', this.move)
+  },
+  methods: {
+    move (e) {
+      const pointer = document.querySelector('.pointer')
+      pointer.setAttribute('style', `left: ${e.pageX}px; top: ${e.pageY}px`)
+    }
+  }
 }).$mount('#app')

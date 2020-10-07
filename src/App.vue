@@ -1,5 +1,8 @@
 <template>
   <div id="app">
+    <div class="pointer d-flex align-items-center justify-content-center">
+      <b-icon-arrow-left-right class="arrow"></b-icon-arrow-left-right>
+    </div>
     <!-- Homepage Hero Content: Starts -->
     <b-container fluid class="bg-black">
       <b-row>
@@ -54,64 +57,70 @@
                   <h2>Through Digital Marketing</h2>
                 </div><!--/info-section-subheader -->
               </div><!-- /info-section-header-container -->
-              <div class="chart-container d-flex">
-                <div class="chart-item-container">
-                  <div class="chart-item d-flex align-items-center text-center">
-                    <h1>Branding, Strategy, and Planning: 101</h1>
-                  </div>
-                  <div class="chart-item-description">
-                    <ul>
-                      <li>Branding</li>
-                      <li>Marketing</li>
-                      <li>Strategy</li>
-                      <li>Digital Marketing</li>
-                      <li>Customer Journey</li>
-                    </ul>
-                    <ul>
-                      <li>Metrics & Budget</li>
-                      <li>Website & App</li>
-                      <li>Content & Social Media Marketing</li>
-                      <li>SEM</li>
-                      <li>Presentation Skills</li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="chart-item-container">
-                  <div class="chart-item d-flex align-items-center text-center">
-                    <h1>Content Marketing</h1>
-                  </div>
-                </div>
-                <div class="chart-item-container">
-                  <div class="chart-item d-flex align-items-center text-center">
-                    <h1>Social Media Marketing</h1>
-                  </div>
-                </div>
-                <div class="chart-item-container">
-                  <div class="chart-item d-flex align-items-center text-center">
-                    <h1>Performance Marketing</h1>
-                  </div>
-                </div>
-                <div class="chart-item-container">
-                  <div class="chart-item d-flex align-items-center text-center">
-                    <h1>Analytics & Reporting</h1>
-                  </div>
-                </div>
-                <div class="chart-item-container">
-                  <div class="chart-item d-flex align-items-center text-center">
-                    <h1>Professional Development</h1>
-                  </div>
-                </div>
-              </div><!--/ info-section-desc-container -->
             </div><!-- /info-section -->
-            <div class="scroll-animation text-center">
-              <svg width="15px" height="110px">
-                <path stroke="black" d="M8.5 0 L8.5 110" />
-              </svg>
-            </div><!-- /scroll-animation -->
           </div><!-- /section-container -->
         </b-col>
       </b-row>
     </b-container>
+    <section>
+      <div class="chart-container">
+        <div class="chart-scroll-container d-flex"
+          @mouseenter="mouseEnterChart"
+          @mouseleave="mouseLeaveChart">
+          <div class="chart-item-container">
+            <div class="chart-item d-flex align-items-center text-center">
+              <h2>Branding, Strategy, and Planning: 101</h2>
+            </div>
+            <!-- <div class="chart-item-description">
+              <ul>
+                <li>Branding</li>
+                <li>Marketing</li>
+                <li>Strategy</li>
+                <li>Digital Marketing</li>
+                <li>Customer Journey</li>
+              </ul>
+              <ul>
+                <li>Metrics & Budget</li>
+                <li>Website & App</li>
+                <li>Content & Social Media Marketing</li>
+                <li>SEM</li>
+                <li>Presentation Skills</li>
+              </ul>
+            </div> -->
+          </div>
+          <div class="chart-item-container">
+            <div class="chart-item d-flex align-items-center text-center">
+              <h2>Content Marketing</h2>
+            </div>
+          </div>
+          <div class="chart-item-container">
+            <div class="chart-item d-flex align-items-center text-center">
+              <h2>Social Media Marketing</h2>
+            </div>
+          </div>
+          <div class="chart-item-container">
+            <div class="chart-item d-flex align-items-center text-center">
+              <h2>Performance Marketing</h2>
+            </div>
+          </div>
+          <div class="chart-item-container">
+            <div class="chart-item d-flex align-items-center text-center">
+              <h2>Analytics & Reporting</h2>
+            </div>
+          </div>
+          <div class="chart-item-container">
+            <div class="chart-item d-flex align-items-center text-center">
+              <h2>Professional Development</h2>
+            </div>
+          </div>
+        </div><!--/chart-scroll-container -->
+      </div><!--/ chart-container -->
+      <div class="scroll-animation text-center">
+        <svg width="15px" height="110px">
+          <path stroke="black" d="M8.5 0 L8.5 110" />
+        </svg>
+      </div><!-- /scroll-animation -->
+    </section>
     <!-- /Homepage - Journey Map: Starts -->
 
     <!-- Portfolio Section
@@ -147,7 +156,17 @@
 
 export default {
   name: 'App',
-  components: {}
+  components: {},
+  methods: {
+    mouseEnterChart (e) {
+      const pointer = document.querySelector('.pointer')
+      pointer.classList.add('expand')
+    },
+    mouseLeaveChart (e) {
+      const pointer = document.querySelector('.pointer')
+      pointer.classList.remove('expand')
+    }
+  }
 }
 </script>
 
@@ -211,20 +230,30 @@ export default {
         }
       }
     }
-    .chart-scroll-container {
+  }
+}
+.chart-container {
+  padding-bottom: 100px;
+  .chart-scroll-container {
+    overflow-x: scroll;
+    padding-left: 25vw;
+    &::-webkit-scrollbar {
+      display: none;
     }
-    .chart-container {
-      overflow-x: scroll;
-      .chart-item-container {
-        padding-right: 40px;
-        .chart-item {
-          width: 400px;
-          height: 300px;;
-          border: 5px solid #232323;
-          border-radius: 5px;
-          padding: 20px;
-          justify-content: center;
-        }
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+    .chart-item-container {
+      padding-right: 100px;
+      &:last-child {
+        padding-right: 25vw;
+      }
+      .chart-item {
+        width: 200px;
+        height: 200px;;
+        border: 5px solid #232323;
+        border-radius: 5px;
+        padding: 10px;
+        justify-content: center;
       }
     }
   }
@@ -257,6 +286,30 @@ export default {
   }
   100%{
   transform:rotate(360deg);
+  }
+}
+
+.pointer {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(254, 220, 38, 0.3);
+  border: 1px solid rgba(254, 220, 38, 0.9);
+  border-radius: 50%;
+  pointer-events: none;
+  box-sizing: border-box;
+  .b-icon.bi.arrow {
+    display: none;
+  }
+  &.expand {
+    width: 40px;
+    height: 40px;
+    .b-icon.bi.arrow {
+      display: block;
+    }
   }
 }
 </style>
